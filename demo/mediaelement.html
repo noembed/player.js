@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vimeo Player API Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" integrity="sha512-RZKnkU75qu9jzuyC+OJGffPEsJKQa7oNARCA6/8hYsHk2sd7Sj89tUCWZ+mV4uAaUbuzay7xFZhq7RkKFtP4Dw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/internal/api-demo.css">
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <div id="wrap">
+        <h1>MediaElement Player Demo</h1>
+
+        <div class="left">
+		 <video width="640" height="360" controls>
+  <!-- source src="https://vod-progressive.akamaized.net/exp=1594473173~acl=%2A%2F572345171.mp4%2A~hmac=88d91351acc016ba4450bf0123e08e2f60054aebbad7c01b13c8020482c171f8/vimeo-prod-skyfire-std-us/01/256/7/176282263/572345171.mp4?filename=Sea+-+4006.mp4" type="video/mp4" -->
+  <-- source src="https://vimeo.com/235281478" type="video/vimeo" / -->
+  <source src="https://tube.switch.ch/videos/78ece87d" type="video/noembed" />
+Your browser does not support the video tag.
+</video> 
+		 <video width="640" height="360" controls>
+  <!-- source src="https://vod-progressive.akamaized.net/exp=1594473173~acl=%2A%2F572345171.mp4%2A~hmac=88d91351acc016ba4450bf0123e08e2f60054aebbad7c01b13c8020482c171f8/vimeo-prod-skyfire-std-us/01/256/7/176282263/572345171.mp4?filename=Sea+-+4006.mp4" type="video/mp4" -->
+  <source src="https://vimeo.com/235281478" type="video/vimeo" />
+Your browser does not support the video tag.
+</video> 
+            <div id="made-in-ny"></div>
+	     <!-- iframe width="640" height="360" src="https://tube.switch.ch/embed/78ece87d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+            <div class="console">
+                <button type="button" class="clear btn">Clear Log</button>
+                <h2>Message Log</h2>
+                <p class="output"></p>
+            </div>
+        </div>
+
+        <div class="right">
+		hi
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js" integrity="sha512-MgxzaA7Bkq7g2ND/4XYgoxUbehuHr3Q/bTuGn4lJkCxfxHEkXzR1Bl0vyCoHhKlMlE2ZaFymsJrRFLiAxQOpPg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/renderers/vimeo.min.js" integrity="sha512-VqJm1qvCaQqHlUrzvIixXA+gjDqOkEd0HosY/UF5+8EHVzvxnCQjQb1af3lV2xxjlKLpJAMyv8yheFtHrbbO4g==" crossorigin="anonymous"></script>
+    <script src="static/internal/noembed.js" crossorigin="anonymous"></script>
+    <script>
+$('video, audio').mediaelementplayer({
+	// Do not forget to put a final slash (/)
+	pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
+	// this will allow the CDN to use Flash without restrictions
+	// (by default, this is set as `sameDomain`)
+	shimScriptAccess: 'always'
+	// more configuration
+});
+    </script>
+</body>
+</html>
